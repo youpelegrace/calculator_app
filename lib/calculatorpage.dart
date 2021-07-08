@@ -22,25 +22,25 @@ class _HomePageState extends State<HomePage> {
       textToDisplay = "";
       firstNum = 0;
       secondNum = 0;
-      res = "";
+      res = "0";
     } else if (btnVal == "AC") {
       textToDisplay = "";
       firstNum = 0;
       secondNum = 0;
-      res = "";
+      res = "0";
       history = "";
+    }
+    if (btnVal == "") {
+      res = "0";
+      history = "0";
     } else if (btnVal == "+/-") {
-      if(textToDisplay[0] != "-") {
-        res="-" + textToDisplay;
+      if (textToDisplay[0] != "-") {
+        res = "-" + textToDisplay;
+      } else {
+        res = textToDisplay.substring(1);
       }
-      else {
-        res=textToDisplay.substring(1);
-      } 
-      }
-
-      else if(btnVal =="<"){
-        res =textToDisplay.substring(0, textToDisplay.length -1);
-      
+    } else if (btnVal == "<") {
+      res = textToDisplay.substring(0, textToDisplay.length - 1);
     } else if (btnVal == "+" ||
         btnVal == "-" ||
         btnVal == "X" ||
@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             // ignore: prefer_const_constructors
             Container(
-              margin: EdgeInsets.only(bottom: 20),
+              margin: EdgeInsets.only(bottom: 30, right: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 // ignore: prefer_const_literals_to_create_immutables

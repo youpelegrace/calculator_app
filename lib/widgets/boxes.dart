@@ -24,7 +24,7 @@ class ListCard extends StatelessWidget {
 
           child: Text(numb,
               style: TextStyle(color: textColor, fontSize: textSize)),
-          onPressed: () {},
+          onPressed: () => callBack(numb),
           color: Colors.grey[900],
           // ignore: prefer_const_constructors
         ),
